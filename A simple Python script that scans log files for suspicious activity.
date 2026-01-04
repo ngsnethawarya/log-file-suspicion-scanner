@@ -1,0 +1,26 @@
+suspicious_terms = [
+    "failed login",
+    "unauthorized",
+    "access denied",
+    "invalid password",
+    "root access attempt"
+]
+
+def scan_log(file_path):
+    try:
+        with open(file_path, "r") as log_file:
+            lines = log_file.readlines()
+
+        print("Scanning log file...\n")
+
+        for line_number, line in enumerate(lines, start=1):
+            for term in suspicious_terms:
+                if term.lower() in line.lower():
+                    print(f"[!] Line {line_number}: {line.strip()}")
+
+    except FileNotFoundError:
+        print("Log file not found.")
+
+if __name__ == "__main__":
+    log_path = input("Enter log file path: ")
+    scan_log(log_path)
