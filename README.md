@@ -11,5 +11,5 @@ It checks for common warning signs such as:
 This project demonstrates how basic log analysis
 starts before advanced SIEM tools are used.
 
-Run:
-python log_scan.py
+Run: python log_scan.py
+
