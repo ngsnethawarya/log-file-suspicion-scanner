@@ -1,4 +1,4 @@
-# Log File Suspicion Scanner
+Log File Suspicion Scanner
 
 This script scans a text-based log file and highlights
 lines that may indicate suspicious activity.
